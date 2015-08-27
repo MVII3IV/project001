@@ -1,0 +1,16 @@
+STEP  1:  click on Wampserver and select apache->httpd.conf
+
+STEP  2: Find and replace the following text
+Find      #LoadModule rewrite_module modules/mod_rewrite.so
+Replace   LoadModule rewrite_module modules/mod_rewrite.so
+
+STEP  3: Restart Wamp Server
+
+STEP 4: Create the file .htaccess in the root directory with the following content
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ api.php [QSA,L]

@@ -1,0 +1,121 @@
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>li>a:hover, .navbar-collapse ul ul li a:hover, .submit input[type="submit"], .pricing-tables .basic:hover, .pricing-tables .pro, .latest-blog ul li .span, .copyright .social-media ul li:hover, .dropdown-menu, .register form button, .top-header2, .about .social-media ul li:hover, .widget-tags ul li a:hover, .news .divider, .gallery-div .divider, .contact-info ul i, .owl-theme .owl-controls .owl-buttons .owl-prev, .owl-theme .owl-controls .owl-buttons .owl-next  {
+    background-color: #ffb546; }
+
+.description { background-color: rgba(243, 187, 6, 0.28); }
+
+@media (max-width:600px) {
+	.description { background-color: #ffb546; }
+}
+
+.navbar-default .navbar-brand:hover { color: #ffb546; border:3px solid #ffb546; }
+
+Footer .logo a:hover { color: #ffb546; border:3px solid #ffb546; }
+
+.search { background-color: #fffff; }
+
+.bg { background-color: rgba(243, 187, 6, 0.28);}
+
+.view-first .mask{background-color: rgba(243, 187, 6, 0.28);}
+
+.scroll-top{background-color: #ffb546;}
+
+.Call-to-action .btn-default:hover { background-color:#ffffff; color:#000000; }
+
+.featured { background-color: #ffffff; }
+
+.img-feat .hover-img { background-color: rgba(243, 187, 6, 0.28); }
+
+.testimonials { background-color: #000000; }
+
+.testimonials .bg { background-color: rgba(243, 187, 6, 0.28); }
+
+.pricing-tables { background-color: #ffffff; }
+
+.pricing-tables .basic:before { background-color: #000000;}
+
+.pricing-tables .price-pro:before { background-color: #000000; }
+
+Footer { background-color: #262626; }
+
+.top-header .ul-top .dropdown-menu > li > a:hover { background-color: transparent; color: #000000; }
+
+.register { background-color: rgba(243, 187, 6, 0.28); }
+
+.register form input { background-color: white; }
+
+.register form button:hover { background-color: #fff; color: #ec407a; }
+
+.subscripte form input[type="email"] {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff; }
+	
+.subscripte .btn-default { color: #ffb546; background-color: #ffffff; }
+
+.language { background-color: rgba(243, 187, 6, 0.28); }
+
+.top-header .ul-top .language a:hover { background-color:#5BB7DE !important; color: #ffffff !important; }
+	
+.top-header .ul-top .language a {   background-color: rgba(243, 187, 6, 0.28) !important;}
+
+.bg-all { background-color: rgba(243, 187, 6, 0.28); }
+
+.about .social-media ul li { background-color: #808080; }
+
+.about .social-media ul li i { color: #ffffff; }
+
+.button.button-border {color: #ffffff; background-color: #ffb546; }
+
+.button {
+  background-color: #ffb546;
+  border: 1px solid #ffb546;
+  color: #fff;}
+  
+.footer-wrap .tagcloud a { background-color: #ffffff; color: #808080; }
+
+.footer-wrap .tagcloud a:hover { background-color:#ffb546 !important; color:#ffffff !important; }
+
+.search-properties { background-color:#fff;}
+
+.widget-tags ul li a { background-color:#202629; color:#ffffff; }
+
+.widget-social ul li a { background-color:#ececec; color:#a3a2a2; }
+
+.widget-social ul li a:hover { background-color:#ec407a; color:#fff; }
+
+.min-width {
+  background-color: rgba(243, 187, 6, 0.28);
+  border: 10px solid rgba(243, 187, 6, 0.28); }
+	
+.min-width .divider { background-color: #ffffff !important; }
+
+.load input[type="submit"] {
+	color: #ffffff;
+	background-color: #ffb546;}
+
+.load input[type="submit"]:hover { background-color:#000000; }
+
+#contactform .form-control {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    color: #808080;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .0);
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .0); }
+  
+#contactform .form-control:focus { background-color: #ffb546; color:#fff; }
+ 
+.tparrows { background: rgba(243, 187, 6, 0.28) !important; }
+
+.tparrows:hover { background: #f483a9 !important; }
+
+.load input[type="submit"] {
+  color: #ffffff;
+  background-color: #ffb546;}
+ 
+.navbar-collapse ul ul li:hover a:first-child {border-top:1px solid #ffb546; }
+
+.navbar-collapse ul ul li:hover a:last-child { border-bottom:1px solid #ffb546; }
+ 
+ .pricing-tables h1 { color: #ffb546; }
+ .pricing-tables .pro .price-ul li { border-bottom: 1px solid #FAE49E; }
