@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-controller="mainController">
 
 <head>
     <!-- Meta UTF8 charset -->
@@ -9,12 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Basic page information -->
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <title>REALCARS</title>
+    <meta name="author" content="{{CONFIG.AUTHOR}}">
+    <meta name="description" content="{{CONFIG.DESCRIPTION}}">
+    
+    <title>{{CONFIG.PAGE_TITLE}}</title>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="assets/images/Icon.png">
+    <link rel="shortcut icon" href="{{CONFIG.FAVICON}}">
 
     <!-- CSS styles -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -24,8 +25,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
     <link rel="stylesheet" href="assets/css/hover.css">
     <link rel="stylesheet" href="assets/css/style-cars.css">
-    <link rel="stylesheet" href="assets/css/color/red_theme.css">
-    <link rel="stylesheet" href="assets/css/color/responsive.css">
+    <link rel="stylesheet" href="{{CONFIG.STYLE}}">
 
     
     
@@ -60,7 +60,7 @@
 
 </head>
 
-<body ng-controller="mainController">
+<body>
 
 
 
@@ -88,13 +88,13 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="collapse-1">
                             <ul class="nav navbar-nav navbar-right navbar-nav-4">
-                                <li class="active dropBottom"><a href="index.html">INICIO</a>
+                                <li class="active dropBottom"><a href="index.html">{{CONFIG.MENU_ITEM_1 | uppercase}}</a>
                                 </li>
-                                <li class="dropBottom"><a href="gallery.html">ANUNCIATE</a>
+                                <li class="dropBottom"><a href="gallery.html">{{CONFIG.MENU_ITEM_2 | uppercase}}</a>
                                 </li>
-                                <li class="dropBottom"><a href="blog.html">PAGOS</a>
+                                <li class="dropBottom"><a href="blog.html">{{CONFIG.MENU_ITEM_3 | uppercase}}</a>
                                 </li>
-                                <li><a href="contacts.html">CONTACTO</a>
+                                <li><a href="contacts.html">{{CONFIG.MENU_ITEM_4 | uppercase}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -108,7 +108,7 @@
                 <div class="container">
                     <div class="contact-top pull-left">
                         <div class="email">
-                            <p><i style="color:#fff;" class="fa fa-envelope-o"></i><span style="color:#fff;">info@tlazya.com</span>
+                            <p><i style="color:#fff;" class="fa fa-envelope-o"></i><span style="color:#fff;">{{CONFIG.EMAIL}}</span>
                             </p>
                         </div>
                         <!-- /.email -->
@@ -116,7 +116,7 @@
                         <span class="divider" style="background:#fff;"></span>
 
                         <div class="phone">
-                            <p><i style="color:#fff;" class="fa fa-phone"></i><span style="color:#fff;">01111143141</span>
+                            <p><i style="color:#fff;" class="fa fa-phone"></i><span style="color:#fff;">{{CONFIG.TEL}}</span>
                             </p>
                         </div>
                         <!-- /.phone -->
@@ -128,7 +128,7 @@
 
 
                             <li class="dropdown">
-                                <a href="#" style="color:#fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i style="color:#fff;" class="fa fa-plus-circle"></i>Registrate</a>
+                                <a href="#" style="color:#fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i style="color:#fff;" class="fa fa-plus-circle"></i>{{CONFIG.REGISTER}}</a>
                                 <ul class="dropdown-menu ul-register" role="menu">
                                     <li class="register">
                                         <form>
@@ -136,20 +136,20 @@
                                             <input type="email" placeholder="Email">
                                             <input type="password" placeholder="Password">
                                             <input type="password" placeholder="Repeat Password">
-                                            <button><i class="fa fa-plus-circle but-icon"></i> Registrate</button>
+                                            <button><i class="fa fa-plus-circle but-icon"></i> {{CONFIG.REGISTER}}</button>
                                         </form>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="dropdown">
-                                <a href="#" style="color:#fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i  style="color:#fff;" class="fa fa-power-off"></i>Accede</a>
+                                <a href="#" style="color:#fff;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i  style="color:#fff;" class="fa fa-power-off"></i>{{CONFIG.ACCESS}}</a>
                                 <ul class="dropdown-menu ul-register" role="menu">
                                     <li class="register">
                                         <form>
                                             <input class="reg" type="text" placeholder="Username">
                                             <input type="password" placeholder="Password">
-                                            <button><i class="fa fa-check but-icon"></i> Accede</button>
+                                            <button><i class="fa fa-check but-icon"></i> {{CONFIG.ACCESS}}</button>
                                         </form>
                                     </li>
                                 </ul>
@@ -183,7 +183,7 @@
                     <div class="col-md-4 featur">
 
                         <div class="title-section">
-                            <h2>Busca tu auto</h2>
+                            <h2>{{CONFIG.SEARCH_TITLE | uppercase}}</h2>
                         </div>
                         <!-- / .title-section -->
 
@@ -278,7 +278,7 @@
 
 
                             <div class="text-center submit">
-                                <input class="btn btn-default" type="submit" value="SEARCH">
+                                <input class="btn btn-default" type="submit" value="{{CONFIG.SEARCH_BUTTON | uppercase}}">
                             </div>
                         </form>
                     </div>
@@ -347,22 +347,23 @@
 
 
 
-        <footer>
+        <footer ng-show="true">
             <div class="row">
                 <div class="container">
                     <!-- col-lg-3 -->
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <!-- logo -->
-                        <div class="logo">
-                            <a class="navbar-brand" href="index.html">REAL CARS</a>
-                        </div>
+                      
+                        <img ng-src="{{CONFIG.LOGO}}">
+                         
                         <!-- /.logo -->
 
                         <div class="about">
-                            <p>45709 Kensington Av.</p>
-                            <p>Los Angeles</p>
-                            <p>United States of America</p>
-                            <h5>00201111143141</h5>
+                            <p>{{CONFIG.ADDRESS_STREET}}</p>
+                            <p>{{CONFIG.ADDRESS_CITY}}</p>
+                            <p>{{CONFIG.ADDRESS_TOWN}}</p>
+                        
+                            <h5>{{CONFIG.TEL}}</h5>
                         </div>
                         <!-- / .about -->
                     </div>
@@ -467,7 +468,7 @@
             <div class="row">
                 <div class="container">
                     <div class="col-lg-9 col-md-9 col-sm-8">
-                        <p>© Copyright 2015 by Tlazya. All rights reserved. {{data[0].name}}</p>
+                        <p> {{CONFIG.FOOTER}}</p>
                     </div>
 
                     <div class="col-lg-3 col-md-3 col-sm-4">
@@ -514,6 +515,39 @@
         var app = angular.module("app",[]);
         
         app.controller("mainController",function($scope){
+            
+            $scope.CONFIG = {
+                
+                PAGE_TITLE : "El buscador mas facil de vehiculos en Mexico",
+                
+                AUTHOR : "Erick Mullen",
+                DESCRIPTION : "El unico sitio donde realmente encuentras lo que buscas, busca facil, busca en comprandoautos.com",
+                STYLE: "assets/css/color/red_theme.css",
+                FAVICON : "assets/images/Icon.png",
+                
+                LOGO : "assets/images/Logos/Logo.png",
+                
+                MENU_ITEM_1 : "inicio",
+                MENU_ITEM_2 : "anunciate",
+                MENU_ITEM_3 : "pagos",
+                MENU_ITEM_4 : "contacto",
+                
+                EMAIL : "contacto@vendiendoautos.com",
+                TEL : "(614) 132 2363",
+                
+                REGISTER : "Registrate",
+                ACCESS : "Accede",
+                
+                SEARCH_TITLE : "busca tu auto",
+                SEARCH_BUTTON : "buscar",
+                
+                ADDRESS_STREET : "Avenida Mirador no. 888",
+                ADDRESS_CITY : "Chihuahua Chih.",
+                ADDRESS_TOWN : "Mexico",
+                
+                "FOOTER" : "© Copyright 2015 vendiendoautos.com All rights reserved."
+                
+            };
             
             $scope.cars = [
                 {
