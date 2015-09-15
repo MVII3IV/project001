@@ -51,6 +51,18 @@
         .navbar-default .navbar-nav>li>a {
             color: #E6E6E6;
         }
+        
+        .search{
+            padding:50px;
+        }
+        
+        .details-feat h4 {
+            padding-left: 15px;
+        }
+        
+        .details-feat p {
+            padding-left: 15px;
+        }
     </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -171,7 +183,7 @@
 
 
 
-        <!-- .search -->
+        <!-- .search position:fixed !important; right:0px; top:0px; z-index:10 !important-->
         <section class="search">
 
 
@@ -290,20 +302,24 @@
                         
                         
 
-                        <div class="col-lg-6" ng-repeat="car in cars">
+                        <div class="col-lg-4" ng-repeat="car in cars">
                             <div class="featur">
+                                
                                 <div class="view view-first">
                                     <img ng-src="{{'assets/images/gallery/'+car.images}}" class="img-responsive" alt="" />
                                     <div class="mask">
 
-                                        <a href="#" class="info  ">Read More</a>
+                                        <a href="#" class="info  ">Leer mas</a>
                                     </div>
                                 </div>
+                                
                                 <div class="details-feat">
-                                    <h4>{{car.brand + ' ' + car.model + ' ' + car.year}}</h4>
+                                    <h4 style="color:#e03e25;">{{car.brand + ' ' + car.model + ' ' + car.year}}</h4>
+                                    <p style="color:#e03e25;">{{car.price | currency : symbol : fractionSize}}</p>
                                     <p>{{car.description}}</p>
-                                    <div class="countup">{{car.price}}</div>
+                                    
                                 </div>
+                            
                             </div>
                         </div>
 
@@ -511,6 +527,7 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/angular.min.js"></script>
 
+
     <script>
         var app = angular.module("app",[]);
         
@@ -549,10 +566,20 @@
                 
             };
             
+            
+            
+            $http.get('/get-allcars').success(function (data) {
+                    $scope.cars = data;
+            });
+            
+            
+            
+            /*
             $scope.cars = [
                 {
                     "brand": "VW",
                     "model": "Jetta",
+                    price : 256000,
                     "year": 2015,
                     "description": "Muy cuidado, unico dueño asientos de piel",
                     "images":"jetta-001.jpg"
@@ -560,6 +587,7 @@
                 {
                     "brand": "BMW",
                     "model": "M3",
+                    price : 100000,
                     "year": 2011,
                     "description": "deportivo de lujo, importado de korea del norte sur",
                     "images":"m3-001.jpg"
@@ -567,6 +595,7 @@
                 {
                     "brand": "Mazda",
                     "model": "3",
+                    price : 100000,
                     "year": 2015,
                     "description": "rojo muy bonito unico dueño, tapiceria muy cuidada",
                     "images":"mazda3-001.jpg"
@@ -574,6 +603,7 @@
                 {
                     "brand": "Chevrolet",
                     "model": "Camaro",
+                    price : 100000,
                     "year": 2015,
                     "description": "Camaro de lujo, el mas caro, cuidado y nuevo",
                     "images":"camaro-001.jpg"
@@ -581,6 +611,7 @@
                 {
                     "brand": "Ford",
                     "model": "Mustang",
+                    price : 100000,
                     "year": 2015,
                     "description": "Ultimo modelo, unico dueño, impecable",
                     "images":"mustang-001.jpg"
@@ -588,12 +619,13 @@
                 {
                     "brand": "Peugeot",
                     "model": "308",
+                    price : 100000,
                     "year": 2015,
                     "description": "El mas deportivo de peugeot, sin detalles todo funcionando",
                     "images":"308-001.jpg"
                 }
             ];
-            
+            */
         });
     </script>
     

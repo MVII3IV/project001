@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="mainController">
+
+<head>
+    <!-- Meta UTF8 charset -->
+    <meta charset="utf-8">
+
+    <!-- Viewport specification for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{{CONFIG.FAVICON}}">
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/owl/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style_common.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
+    <link rel="stylesheet" href="assets/css/hover.css">
+    <link rel="stylesheet" href="assets/css/style-cars.css">
+
+    
+    <style>
+    
+        .grey{
+            width: 100px;
+            height: 100px;
+            background: grey;
+        }
+        
+        .red{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        
+        <div class="row">
+            
+            <div class="col-md-3 test" style="">
+                <br><br><br><br><br><br>
+                <input type="text" value="asdasdsadsad">
+                <br>
+                <input type="text" value="asdasdsadsad">
+                <br>
+                <input type="text" value="asdasdsadsad">
+                <br>
+                <br>
+                <input type="text" value="asdasdsadsad">
+                <br>
+                <br>
+                <input type="text" value="asdasdsadsad">
+                <br>
+                <br>
+                <button>hola este e sun boton</button>
+            </div>
+            <div class="col-md-offset-3 col-md-9">
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="red"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="red"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="red"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="red"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+            </div>
+            
+        </div>
+    
+    </div>
+
+
+    <!-- end top -->
+
+    <!-- Plugins -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.tinycarousel.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script type="text/javascript">
+        $(window).scroll(function(){ 
+           
+
+        var a = 112;
+        var pos = $(window).scrollTop();
+            
+            console.log(pos);
+            
+        if(pos > a) {
+            $(".test").css({
+                        position: 'fixed'
+                    });
+        }
+            
+        else {
+            $(".test").css({
+                        position: 'absolute',
+         //               top:'10px'
+                    });
+        }
+        });
+    </script>
+    
+</body>
+
+
+
+</html>
